@@ -77,7 +77,7 @@ supabase/
 ├── functions/                        # Edge Functions Deno/TypeScript và hướng dẫn triển khai
 ├── seed.sql                          # Khu vực giao hàng và danh mục mẫu local
 └── tests/                            # Kiểm thử migration và RLS
-html/, css/, images/                   # Mã và tài nguyên gốc trong repo
+images/                               # Ảnh gốc dùng làm tham chiếu cho danh mục
 ```
 
 TanStack Query quản lý dữ liệu API. Zustand giữ giỏ hàng và mã giảm giá cục bộ. Next.js đặt các route Supabase trong nhóm `(market)`.

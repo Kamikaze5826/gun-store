@@ -12,9 +12,7 @@
   --hover: #e8f0e8;
   --focus: #297358;
   --accent: #1e6347;
-  --brand: #4e7f61;
   --brand-mark: #183e32;
-  --hero: #163a30;
   --primary: #183e32;
   --primary-hover: #285544;
   --on-primary: #fff;
@@ -45,9 +43,7 @@
   --hover: #2d4034;
   --focus: #9adab4;
   --accent: #a4dfbb;
-  --brand: #93d2ac;
   --brand-mark: #315c47;
-  --hero: #1d3b30;
   --primary: #a4dfbb;
   --primary-hover: #c0ebcf;
   --on-primary: #102d22;
@@ -73,43 +69,19 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 .shell { width: min(1200px, calc(100% - 64px)); margin-inline: auto; }
 .site-header { background: var(--surface); border-bottom: 1px solid var(--line); }
-.header-inner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 24px; min-height: 78px; }
-.header-inner > button { justify-self: end; }
 .brand { display: inline-flex; width: fit-content; gap: 10px; align-items: center; font-size: 1.2rem; font-weight: 750; white-space: nowrap; letter-spacing: -.04em; }
 .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; background: var(--brand-mark); color: white; }
-.brand-accent { color: var(--brand); }
 .site-search { display: flex; align-items: center; gap: 11px; color: var(--muted); border: 1px solid var(--line); background: var(--soft); padding: 0 15px; min-height: 44px; border-radius: 999px; }
 .site-search input { color: var(--text); width: 100%; min-width: 0; }
 .site-search input:focus { outline: none; }
 .site-search:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
 .cart-count { color: var(--primary-soft-text); background: var(--primary-soft); padding: 1px 7px; border-radius: 999px; font-size: .875rem; }
 
-.hero { margin-top: 28px; display: grid; grid-template-columns: 1.02fr 1fr; min-height: 380px; overflow: hidden; border-radius: 24px; background: var(--hero); color: #fff; }
-.hero-copy { display: flex; flex-direction: column; gap: 19px; align-items: flex-start; justify-content: center; padding: clamp(28px, 5vw, 65px); }
-.hero-kicker { display: block; font-size: .875rem; letter-spacing: .1em; font-weight: 700; color: #bedfc8; }
-.hero h1 { max-width: 13ch; font-size: clamp(2.55rem, 5vw, 4.5rem); letter-spacing: -.065em; font-weight: 680; line-height: 1.03; }
-.hero p { line-height: 1.55; color: #e1eee6; font-size: 1.05rem; max-width: 31ch; }
-.hero-photo { background: #537467 url("/marketplace/workspace.jpg") center 54% / cover no-repeat; min-height: 240px; }
-
-.catalog { padding-block: 30px 52px; scroll-margin-top: 16px; }
-.categories { display: flex; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--line); padding-bottom: 26px; }
-.categories button { display: flex; align-items: center; gap: 8px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); font-weight: 600; font-size: .95rem; }
-.categories button:hover { background: var(--hover); }
-.categories button[aria-pressed="true"] { border-color: var(--primary); color: var(--on-primary); background: var(--primary); }
-.catalog-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 25px 0 20px; }
-.catalog-header h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 730; letter-spacing: -.04em; }
-.catalog-header p { color: var(--muted); margin-top: 3px; }
-.sort-select { appearance: none; border: 1px solid var(--line); border-radius: 12px; color: var(--text); background: var(--surface); min-height: 44px; padding: 0 36px 0 12px; }
-.catalog-header label { position: relative; }
-.catalog-header label::after { content: ""; position: absolute; border: solid var(--muted); border-width: 0 2px 2px 0; width: 7px; height: 7px; right: 15px; top: 16px; transform: rotate(45deg); pointer-events: none; }
 .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
 .product-card { overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 17px; background: var(--surface); }
 .product-preview { display: flex; flex-direction: column; width: 100%; text-align: start; }
 .product-preview:focus-visible { outline-offset: -3px; }
 .product-image { display: block; width: 100%; aspect-ratio: 1.38; background: #dce9e0 center / cover no-repeat; }
-.product-image-headphones { background-color: #e8e3ed; }
-.product-image-mouse { background-color: #e4e8f1; }
-.product-image-notebook { background-color: #ede5d7; }
 .product-shop { color: var(--muted); font-size: .875rem; padding: 14px 14px 2px; }
 .product-name { font-size: 1.05rem; font-weight: 700; padding: 0 14px; }
 .product-preview:hover .product-name { color: var(--accent); text-decoration: underline; }
@@ -132,20 +104,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .cart-total { display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; }
 
 @media (max-width: 900px) {
-  .header-inner { gap: 16px; }
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
   .shell { width: calc(100% - 32px); }
-  .header-inner { grid-template-columns: 1fr auto; padding-block: 12px; gap: 10px; }
-  .header-inner > .site-search { grid-column: 1; grid-row: 2; }
-  .header-inner > .preference-controls { grid-column: 2; grid-row: 2; }
   .cart-label { display: none; }
-  .hero { grid-template-columns: 1fr; margin-top: 16px; }
-  .hero-photo { min-height: 180px; }
-  .catalog { padding-top: 22px; }
-  .categories { gap: 7px; padding-bottom: 19px; }
-  .categories button { padding-inline: 12px; }
   .product-grid { gap: 10px; }
   .product-name, .product-shop, .product-bottom { padding-inline: 9px; }
   .product-bottom strong { font-size: .95rem; }
@@ -299,7 +262,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .language-control::after { right: 9px; }
 }
 @media (max-width: 380px) {
-  .header-inner .brand { font-size: 1rem; }
   .live-toolbar > .brand { font-size: .95rem; gap: 5px; }
   .live-toolbar .brand-mark { width: 30px; height: 30px; }
   .onboarding-panel .market-fields { grid-template-columns: 1fr; }
